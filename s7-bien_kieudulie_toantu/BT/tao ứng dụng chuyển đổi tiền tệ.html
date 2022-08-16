@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Ứng dụng chuyển đổi tiền tệ</title>
 </head>
 <body>
-<table>
+<table style="padding: 10px" >
     <tr>
             <th>Amount</th>
             <th>From Currency </th>
@@ -15,31 +15,42 @@
      <tr>
          <form>
              <td>
-                 <input type="text" id="tien" size="10px">
+                 <input type="text" id="amount" size="10px">
              </td>
              <td>
-             <select id="from">
-                 <option>Viet Nam</option>
+             <select id="fromcurrency">
+                 <option>VND</option>
                  <option>USD</option>
              </select>
              </td>
              <td>
-                 <select id="to">
+                 <select id="tocurrency">
                      <option>USD</option>
-                     <option>Viet Nam</option>
+                     <option>VND</option>
                  </select>
              </td>
              <td>
-                 <button type="button" onclick="changeMoney()" id="chuyen">Convert</button>
+                 <input type="button" onclick="changeMoney()" value="Convert" "></input>
              </td>
          </form>
      </tr>
 </table>
+    <p>Kết quả: <span id="ketqua"></span> </p>
 <script>
 function changeMoney() {
-    let nhap = 
+    let num1 = document.getElementById("amount").value;
+    let to = document.getElementById("tocurrency").value;
+    let from = document.getElementById("fromcurrency").value;
+    if (from==to){
+        document.getElementById("ketqua").innerHTML = num1;
+    }
+    else if( from =='VND' && to == 'USD') {
+        document.getElementById("ketqua").innerHTML = num1/23000;
+    }
+    else if (from == 'USD' && to=='VND'){
+        document.getElementById("ketqua").innerHTML = num1 * 23000;
+    }
 }
 </script>
-
 </body>
 </html>
