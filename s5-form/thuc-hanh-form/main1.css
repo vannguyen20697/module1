@@ -1,0 +1,28 @@
+body{
+    padding: 50px
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+    color: black;
+}
+th,td{
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+}
+pre{
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+    color: blue;
+}
+.th1 {
+    background-color: yellow;
+}
+.th2{
+    background-color: orange ;
+}

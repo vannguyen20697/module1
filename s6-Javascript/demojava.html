@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascrip</title>
+</head>
+<body>
+<p>dụng trực tiếp JS trong thẻ HTML</p>
+<button type="button" onclick="alert('Đây là trực tiếp trong thể HTML')">Click me</button>
+<p>Hello 1</p>
+<p id="hl2">Hello 2</p>
+<p id="hl3">Hello 3</p>
+<button type="button" onclick="showB()">CLICK</button>
+<script src="showS.js"></script>
+<script>
+    {
+    alert('đây là code JS trong cặp scrip');
+    confirm("bạn có chắc xóa cmt này không");
+    prompt('Nam nay bạn bao nhiêu tuổi');
+    console.log('đây là màn hình console');
+    document.getElementById("hl2").innerText="Thay đổi giá trị của 1 dòng <b>Hello 2";
+    document.getElementById("hl3").innerHTML="Thay đổi giá trị cảu 1 dòng<b>Hello 3";
+    }
+</script>
+
+
+</body>
+</html>

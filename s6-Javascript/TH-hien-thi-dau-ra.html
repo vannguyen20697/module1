@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiễn thị đầu ra</title>
+</head>
+<body>
+<p>Hiển thị kết quả sử dụng hàm alert</p>
+    <button type="button" onclick="showmess()">Click me</button>
+<script>
+    function showmess() {
+        alert('Hello Nanon')
+    }
+ </script>
+    <br>
+<p>Hiển thị kết quả sử dụng thẻ HTML</p>
+<div id="mix"></div>
+<button type="button" onclick="showid()">PRESS me</button>
+<script>
+    function showid() {
+        document.getElementById('mix').innerHTML='Hello Mix'
+
+    }
+</script>
+    <br>
+<p>Hiển thị kết quả sử dụng hàm document.write</p>
+<button type="button" onclick="showwritte()">Nhấn vào đây nè</button>
+<script>
+    function showwritte() {
+        document.write('Hello Best')
+    }
+</script>
+<p>Hiển thị kết quả sử dụng hàm console.log</p>
+<button type="button" onclick="showconsole()">Hãy nhấn vào đây</button>
+<script>
+    function showconsole() {
+        console.log('Hello Apo')
+
+    }
+</script>
+<p>Tạo một trang web với một nút</p>
+    <button type="button" onclick="alert('Hello Peanut')">CLIck here</button>
+<p>Tạo một trang web với một nút trong scrip</p>
+    <button type="button" onclick="showA()">Nhấn vào</button>
+<script>
+    function showA() {
+        alert('Hello jeff')
+
+    }
+</script>
+<p> Tạo môt tang web với file JS </p>
+<button type="button" onclick="showB()">Nhấn vào đi</button>
+<script src="showS.js"></script>
+</body>
+</html>

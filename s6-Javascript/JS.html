@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoc ve nhúng JS</title>
+</head>
+<body>
+<p>Nhứng trực tiếp vào thẻ HTML</p>
+<button type="button" onclick="alert('hello Nanon')">Click me</button>
+<p>Nhúng băng SCRIP</p>
+<script>
+    alert('Hello mix');
+    confirm('Bạn có phải fan Mix không');
+    prompt('Hãy nêu cảm nhận về Mix');
+    console.log('Yêu mix nhiều');
+</script>
+<p>Hello 1</p>
+<p id="hl2">Hello 2</p>
+<p id="hl3"> Hello 3</p>
+<p>Hello 4</p>
+<button type="button" onclick="showmix()">Click me</button>
+<script>
+    function showmix() {
+    alert('Mix thật cute')
+    }
+</script>
+<button type="button" onclick="showwin()">Click me</button>
+<br>
+<script>
+    function showwin() {
+        document.write('hello win')
+    }
+
+</script>
+<script>
+    document.getElementById('hl2').innerText='HELLO nanon cute'
+    document.getElementById('hl3').innerHTML='hello prem so <b>cute'
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH Khai báo và sử dụng biến</title>
+</head>
+<body>
+<script>
+    let i=10;
+    let f=20.5;
+    let b=true;
+    let s='Hà Nội';
+
+    document.write('i = ' + i);
+    document.write('<br/>');
+    document.write('f = ' + f);
+    document.write('<br/>');
+    document.write('b = ' + b);
+    document.write('<br/>');
+    document.write('s = ' + s);
+
+</script>
+<p>Tìm diện tích</p>
+<script>
+    let width = 20;
+    let height = 10;
+    let area = width * height;
+
+    document.write('AREA=' + area)
+</script>
+<p>a có phải là bội số của b</p>
+<script>
+    a = prompt('Nhập biến a vào');
+    b = prompt('Nhập biến b vào');
+    if (a%b==0) {
+        alert('a chia hết cho b');
+    }
+    else {
+        alert('a không chia hết cho b')
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điểm trung bình và tổng</title>
+</head>
+<body>
+<script>
+    let ly;
+    let hoa;
+    let sinh ;
+    ly =parseInt( prompt('Nhập điểm vật lý:'));
+    hoa = parseInt(prompt('Nhập điểm hóa học:'));
+    sinh =parseInt( prompt('Nhập điểm sinh học:'));
+    let tongdiem = (ly + hoa + sinh);
+    document.write(" tong la " + tongdiem  );
+    document.write('<br>')
+    let trungbinh = tongdiem/3;
+    document.write(" trungbinh " + trungbinh  );
+</script>
+</body>
+</html>
