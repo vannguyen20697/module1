@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+<script>
+    let weight = parseInt(prompt('Nhập cân nặng kg của cơ thể: '));
+    let height = parseInt(prompt('Nhập chiều cao mét cơ thể: '));
+    let bmi = weight / ( height ^ 2 );
+    if (bmi < 18.5){
+        document.write('Suy dinh dưỡng và chỉ số BIM là: ' + bmi);
+    } else if ( bmi < 25){
+
+        document.write('bình thường và chỉ số BIM là ' + bmi);
+    } else  if (bmi < 30){
+        document.write('Hơi dư cân và chỉ số BIM là ' + bmi);
+    } else {
+        document.write('Béo phì và chỉ số BIM là ' + bmi);
+    }
+</script>
+</body>
+</html>
