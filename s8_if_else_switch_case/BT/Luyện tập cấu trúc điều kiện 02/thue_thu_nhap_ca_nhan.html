@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    let salary = parseFloat(prompt('Nhập tiền lương của cá nhân: '));
+    if( salary > 80000000){
+        document.write('Thuế thu nhập cần trả là: '+ (salary*0.35 - 9850000));
+    } else if(salary > 52000000 ){
+        document.write('Thuế thu nhập cần trả là: '+ (salary*0.3 - 5850000));
+    } else if(salary > 32000000){
+        document.write('Thuế thu nhập cần trả là: '+ (salary*0.25 - 3250000));
+    } else if(salary > 18000000){
+        document.write('Thuế thu nhập cần trả là: '+ (salary*0.2 - 1650000));
+    } else if(salary >10000000){
+        document.write('Thuế thu nhập cần trả là: '+ (salary*0.15 - 750000));
+    } else if(salary > 5000000){
+        document.write('Thuế thu nhập cần trả là: '+ (salary*0.15 - 250000));
+    }else {
+        document.write('Thuế thu nhập cần trả là: '+ salary*0.05);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<script>
+    let soTienBanDau = parseFloat(prompt("Nhập số tiền ban đầu cho vay vào:  "));
+    let soThangChoVay = parseInt(prompt("Nhập số tháng cho vay vào: "));
+    let laiNganHang = soTienBanDau * (0.12 * soThangChoVay + 1);
+    if (soTienBanDau < 0 || soThangChoVay < 0) {
+        alert("Vui lòng nhập lại");
+    } else {
+        alert("Tiền lãi ngân hàng thu được:" + " " + laiNganHang);
+    }
+</script>
+</body>
+</html>

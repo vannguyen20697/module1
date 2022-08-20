@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực của học sinh</title>
+</head>
+<body>
+<script>
+    let kiemtra = parseInt(prompt('Nhập điểm kiểm tra của học sinh: '));
+    let giuaky =  parseInt(prompt('Nhập giữa kỳ của học sinh: '));
+    let cuoiky =  parseInt(prompt('Nhập cuối kỳ của học sinh: '));
+    let trungbinh = (kiemtra + giuaky*2 + cuoiky*3)/6;
+    if (trungbinh >= 8.0){
+        document.write('Chúc mừng học sinh xếp loại Giỏi');
+    } else if (trungbinh >= 7.0){
+        document.write('Chúc mừng học sinh xếp loại Khá');
+    } else if (trungbinh >= 5.0){
+        document.write('Học sinh xếp loại trung bình');
+    } else {
+        document.write('Học sinh xếp loại yếu');
+    }
+</script>
+</body>
+</html>

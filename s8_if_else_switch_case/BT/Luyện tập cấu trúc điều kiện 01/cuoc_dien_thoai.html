@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cước điện thoại cho một hộ gia đình</title>
+</head>
+<body>
+<script>
+
+   let cuocdienthoai = parseInt(prompt('Nhập số phút: '));
+    let a = 700;
+    let b = 1500;
+    if (cuocdienthoai <= 10)
+    {
+        document.write('Cước tiền điện thoại của gia đình là: ' + cuocdienthoai * a);
+    }else {
+        document.write('Cước tiền điện thoại của gia đình là: ' + ((cuocdienthoai-10)*b + 10*a));
+    }
+    //Nếu gọi duwois 10 phút thì tính 700đ. Còn nếu trên 10 phút thì tính phút còn lại giá 1500)
+</script>
+</body>
+</html>

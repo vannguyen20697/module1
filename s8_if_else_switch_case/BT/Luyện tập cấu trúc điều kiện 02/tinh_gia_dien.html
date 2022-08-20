@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kwh = parseFloat(prompt('Nhập chữ số của điện: '));
+    if (kwh > 401){
+        document.write("Tiền điện phải trả là: " + kwh * 2701);
+    } else if( kwh > 301){
+        document.write("Tiền điện phải trả là: " + kwh * 2615);
+    } else if(kwh > 201){
+        document.write("Tiền điện phải trả là: " + kwh * 2340);
+    } else if(kwh > 101){
+        document.write("Tiền điện phải trả là: " + kwh * 1858);
+    } else if(kwh > 51){
+        document.write("Tiền điện phải trả là: " + kwh * 1600);
+    } else{
+        document.write("Tiền điện phải trả là: " + kwh * 1549);
+    }
+</script>
+</body>
+</html>
