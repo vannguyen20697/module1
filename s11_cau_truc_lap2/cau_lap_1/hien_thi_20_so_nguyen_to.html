@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt('Nhập số lượng số nguyên tố cần in ra: '));//vd 10
+    let i = 2;
+    let count =0;
+    let prime;
+    while (count <= number){ // count bien dem
+        prime = 1;              // gan cho prime = 1
+        for(let j=2; j < i; j++){           //lúc này j= 2, i=2
+            if ((i % j == 0) && (i != 2)){
+                prime=0;
+            }
+        }
+        if (prime == 1){
+            document.write(i+"<br>");
+            count++;
+        }
+        i++
+    }
+</script>
+</body>
+</html>

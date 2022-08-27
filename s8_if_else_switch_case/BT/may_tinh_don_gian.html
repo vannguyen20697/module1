@@ -7,53 +7,51 @@
 <body>
     <table>
         <tr>
-            <td colspan="4"><input type="text" id="nhap"></td>
+            <td colspan="4"><input type="text" id="ketqua" disabled></td>
+            <!--disabled vô hiệu hóa input-->
         </tr>
         <tr>
-            <td><input type="button" value="1" onclick="nhap(this.value)"></td>
-            <td><input type="button" value="2" onclick="nhap(this.value)"></td>
-            <td><input type="button" value="3" onclick="nhap(this.value)"></td>
-            <td><input type="button" value="+" onclick="nhap(this.value)"></td>
+            <td><input type="button" value="1" onclick="bam('1')"></td>
+            <td><input type="button" value="2" onclick="bam('2')"></td>
+            <td><input type="button" value="3" onclick="bam('3')"></td>
+            <td><input type="button" value="+" onclick="bam('+')"></td>
         </tr>
         <tr>
-            <td><input type="button" value="4" onclick="nhap(this.value)"></td>
-            <td><input type="button" value="5" onclick="nhap(this.value)"></td>
-            <td><input type="button" value="6" onclick="nhap(this.value)"></td>
-            <td><input type="button" value="-" onclick="nhap(this.value)"></td>
+            <td><input type="button" value="4" onclick="bam('4')"></td>
+            <td><input type="button" value="5" onclick="bam('5')"></td>
+            <td><input type="button" value="6" onclick="bam('6')"></td>
+            <td><input type="button" value="-" onclick="bam('-')"></td>
         </tr>
         <tr>
-            <td><input type="button" value="7" onclick="nhap(this.value)"></td>
-            <td><input type="button" value="8" onclick="nhap(this.value)"></td>
-            <td><input type="button" value="9" onclick="nhap(this.value)"></td>
-            <td><input type="button" value="*" onclick="nhap(this.value)"></td>
+            <td><input type="button" value="7" onclick="bam('7')"></td>
+            <td><input type="button" value="8" onclick="bam('8')"></td>
+            <td><input type="button" value="9" onclick="bam('9')"></td>
+            <td><input type="button" value="*" onclick="bam('10')"></td>
         </tr>
         <tr>
             <td><input type="button" value="C" onclick="xoa()"></td>
-            <td><input type="button" value="=" onclick="bang()"></td>
-            <td><input type="button" value="0" onclick="nhap(this.value)"></td>
-            <td><input type="button" value="/" onclick="nhap(this.value)"></td>
+            <td><input type="button" value="=" onclick="tinhtoan()"></td>
+            <td><input type="button" value="0" onclick="bam('0')"></td>
+            <td><input type="button" value="/" onclick="bam(-'/')"></td>
         </tr>
     </table>
-<script>
-    let check = false;
-    function nhap(duLieu) {
-        if (!check){
-            let str = document.getElementById("nhap").value;
-            document.getElementById("nhap").value = str+ duLieu;
-        }else {
-            document.getElementById("nhap").value = duLieu;
-            check=false;
+    <script>
+        function xoa() {
+            document.getElementById("ketqua").value = " ";
         }
-    }
-    function bang() {
-        check =true;
-        let str = document.getElementById("nhap").value;
-        let ketQua = eval(str);
-        document.getElementById("nhap").value = ketQua;
-    }
-    function xoa() {
-        document.getElementById("nhap").value="";
-    }
-</script>
+        function bam(value) {
+            document.getElementById("ketqua").value += value;
+        }
+
+        function tinhtoan() {
+            let value = document.getElementById("result").value;
+            let valueResult = eval(valueDisplay);
+            document.getElementById("result").value = valueResult;
+        }
+    </script>
+
+    <!--eval() hiểu được giá trị dạng chuỗi sang biểu thức và sẽ tính toán ra được kq nếu ghi đúng thứ tự-->
+
+
 </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        let n1 = 0;
+        let n2 = 1;
+        let numNext = 0;
+        for(let i = 0; i < 20; i++){
+            n1=n2;
+            n2=numNext;
+            numNext=n1 + n2;
+            if(numNext % 5 == 0){
+                document.write('sô chia hết cho 5 là: '+ numNext);
+                break;
+            }
+
+</script>
+</body>
+</html>

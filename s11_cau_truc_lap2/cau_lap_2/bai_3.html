@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //tam giác vuông thứ nhất
+     for (let i = 0; i < 6; i++) { //hàng i=1 i= 2
+         for (let j = 1; j <= i; j++) { // cột  j = 1,
+             document.writeln("*"); //thì 1 *
+         }
+         document.writeln("<br>"); // xuống hàng
+     }
+     //tam giác vuông thứ 2
+    for ( let i = 0; i < 6; i ++){ // 5 hàng i= 0
+        for (let j = 1; j < (6-i); j++) { // j=1; 1<6;
+            document.writeln("*");// in ra dược 5 *
+        }
+
+        document.writeln("<br>"); // xuongs hàng quay lại  vòng lặp i=1
+    }
+
+    //tam giac vuong thu3
+    for (let i = 1; i < 6; i++) {   //i là dọc, j là ngang  i=2
+        for (let j = 1; j < 6; j++) {       //j = 1 ;i =1       j
+            if (j - i >= 0) {               // vẽ hàng 1full *
+                document.write('*');
+            } else {
+                document.write("&ensp;");
+            }
+        }
+        document.writeln("<br>");           // vòng lap 1 xuongs hàng//
+    }
+    //tam giac vuong thu4
+    for (let i = 1; i < 6; i++) {   // nguoc lai cua so 3
+        for (let j = 1; j < 6; j++) {
+            if (i - j >= 0) {
+                document.write('*');
+            } else {
+                document.write("&ensp;");
+            }
+        }
+        document.writeln("<br>");
+    }
+
+
+</script>
+</body>
+</html>

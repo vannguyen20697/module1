@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n1 = 0;
+    let n2 = 1;
+    let numNext = 0;
+    for (let i = 0; i < 20; i++){
+        n1=n2; // lúc này giá trị của n1 là 1
+        n2=numNext; // n2 là = numnext=0
+        numNext=n1 + n2; //mà numnext là 1+0
+        document.write(numNext + "<br>"); // in ra 1
+    } // quay lại vòng lặp tăng i  lên 1
+    //khi i tăng lên 1 thì n1 = 0
+    // n2 = 1
+    // numnext là 1+0
+    // quay lại vòng lặp i lên 2
+    //khi i=2 thì n1 = 1
+    //n2 = 1
+    //numnext= 1+1
+</script>
+</body>
+</html>

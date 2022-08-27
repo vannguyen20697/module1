@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n1 = 0;
+    let n2 = 1;
+    let numNext = 0;
+    let sum = 0 ;
+    for (let i = 1; i < 20; i++){
+        n1=n2; // n1 = 1 tiep / n1 = 0/ n=1
+        n2=numNext; // n2 = 0 / n2 = 1/ n2=1
+        numNext=n1 + n2; // numnext = 1 / next = 1/ next=2
+        sum =  sum + numNext; // sum = 0+1 quay tiếp lại vòng lặp/ sum = 1+1/ sum=4
+    }
+    document.write(sum + "<br>");
+</script>
+</body>
+</html>

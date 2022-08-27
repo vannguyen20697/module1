@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tongCacSoChiaHetCho7 = 0;
+    let dem = 0;
+    for (let i = 1; i <= 10000; i++) {
+        if (dem == 30) {// nào mà đếm đủ 30 thì vòng lặp ngừng do có break thoát vòng lặp
+            break; //thoát vòng lặp
+        }
+        if (i % 7 == 0) {
+            tongCacSoChiaHetCho7 += i;
+            dem++;
+        }
+    }
+    document.write("Tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên là:" + " " + tongCacSoChiaHetCho7);
+
+</script>
+</body>
+</html>

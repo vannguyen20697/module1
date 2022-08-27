@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhập chiều dài của hinh chữ nhật cần vẽ');
+    let b = prompt('Nhập chiều rộng của hình chữ nhật cần vẽ');
+    for(let i=1; i<=a;i++) {
+        for (let j = 1; j <= b; j++) {
+            if (i == 1 || j == 1 || j == b ||  i== a)
+                document.write('*');
+            else
+                document.write("&nbsp&nbsp");
+            }
+            document.write("<br>");
+    }
+</script>
+</body>
+</html>

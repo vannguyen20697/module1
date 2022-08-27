@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let soTienBanDau = prompt("Nhập số tiền bạn muốn cho vay");
+    // let laiSuatHangNam = prompt("nhập lại suất mong muốn");
+    // let soNamChoVay = parseInt(prompt("Hãy nhập vào số năm bạn muốn  cho vay"));
+    // let tienTuongLaiPhaiTra;
+    // let tienLaiThuVe;
+    // for (let i = 1; i <= soNamChoVay; i++) {
+    //     tienTuongLaiPhaiTra = soTienBanDau * (Math.pow((1 + laiSuatHangNam), i)); //10000*(1+0.1)^1
+    //     tienLaiThuVe = parseInt(tienTuongLaiPhaiTra - soTienBanDau);
+    //     document.write("Tiền lãi thu về năm thứ " + " " + i + " " + "là" + " " + tienLaiThuVe + "<br>");
+    // }
+
+
+    let chieuDaiHinhChuNhat=+prompt("Hãy nhập chiều dài hình chữ nhật");
+    let chieuRongHinhChuNhat=+prompt("Hãy nhập chiều rộng hình chữ nhật");
+    let inHinhChuNhat = "";
+    for (let i = 1; i <= chieuRongHinhChuNhat; i++) {
+        if ((i === 1) || (i === chieuRongHinhChuNhat)) {
+            for (let j = 1; j <= chieuDaiHinhChuNhat; j++) {
+                inHinhChuNhat += "*";
+            }
+        } else {
+            for (let j = 1; j <= chieuDaiHinhChuNhat; j++) {
+                if ((j === 1) || (j === chieuDaiHinhChuNhat)) {
+                    inHinhChuNhat += "*";
+                } else {
+                    inHinhChuNhat += "&ensp;";
+                }
+            }
+        }
+        inHinhChuNhat += "<br>";
+    }
+    document.write(inHinhChuNhat + "<br>");
+
+
+    let tienGocHangThang;
+    let tienLaiThang;
+    let soTienVay = parseInt(prompt(Nhập số tiền cần vay:));
+    let laiSuatVayTheoThang = parseInt(prompt('Nhập lãi suất mong muốn'));
+    let soThangVay = parseInt(prompt('Số tháng cần vay'));
+    for(let i =1; i <=soThangVay; i++){
+        tienGocHangThang = soTienVay/soThangVay;
+        tienLaiThang = tienGocHangThang*laiSuatVayTheoThang;
+    }
+    - Tiền gốc hàng tháng = số tiền vay/số tháng vay.
+
+    - Tiền lãi tháng đầu = số tiền vay x lãi suất vay theo tháng.
+
+    - Tiền lãi các tháng tiếp theo = số tiền gốc còn lại x lãi suất vay.
+</script>
+
+
+
+</body>
+</html>
