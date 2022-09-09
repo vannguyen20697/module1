@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược
+    // let array =  [ 'c', 's', 'c', '2', '6', '1' ];
+    // document.write(array.reverse());
+    let array=[];
+    let a = prompt('nhập số phần tử');
+    for (let i=0; i<=a; i++){
+        array.push(prompt('nhập sô phần tử thứ ' + i ));
+    }
+    document.write( 'dãy ban đầu nhập vào ' + array + '<br>');
+    document.write('dãy đảo ngược là: ' + array.reverse());
+
+
+</script>
 </body>
 </html>

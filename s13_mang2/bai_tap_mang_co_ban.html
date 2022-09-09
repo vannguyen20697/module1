@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //bài tập 1
+    // myColor = ["Red", "Green", "White", "Black"];
+    // document.write(myColor);
+    // document.write(myColor.toString());
+    // document.write(myColor.join("+"));
+    // document.write(myColor.join());
+    // bài tập 2
+    let num=prompt('Nhập một dãy số bất kỳ');
+    let result = [num[0]];
+    for (let i = 1;i< num.length; i++){
+        if( num[i-1]%2 == 0 && num[i]%2 == 0){
+            result.push('-', num[i]);
+        }else
+        {
+            result.push(num[i]);
+        }
+    }
+    document.write(result.join(''));
+    // // bai 3:
+    // let str = prompt('nhập vào một chuỗi bất kỳ');
+    // let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    // let lower = 'abcdefghijklmnopqrstuvwxyz';
+    // let result = [];
+    // for ( let i=0; i< str.length;i++){
+    //    if(upper.indexOf(str[i]) !== -1){
+    //        result.push(str[i].toLowerCase());
+    //    }else if (lower.indexOf(str[i]) !== -1) {
+    //        result.push(str[i].toUpperCase());
+    //    } else{
+    //        result.push(str[i]);
+    //    }
+    // }
+    // document.write(result.join(""));
+
+</script>
 </body>
 </html>

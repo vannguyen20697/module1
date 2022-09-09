@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
+
+    let stringFirst = prompt("Nhập vào chuỗi 1");
+    let stringSecond = prompt("nhập vào chuỗi 2");
+    let str = "";
+    if (stringFirst.length === stringSecond.length) {
+        for (let i = 0; i < stringFirst.length; i++) {
+            if (stringSecond.includes(stringFirst[i])) {// true
+                str += stringFirst[i];
+            }
+        }
+        if (str.length === stringSecond.length) {
+            document.write("Hai chuỗi trùng nhau");
+        } else {
+            document.write("Hai chuỗi không trùng nhau");
+        }
+    } else {
+        document.write("Hai chuỗi không giống nhau")
+    }
+</script>
 </body>
 </html>

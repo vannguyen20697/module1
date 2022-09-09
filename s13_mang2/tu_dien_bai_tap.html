@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input type="text" id="text">
+<button onclick="tuDien()" >Dich</button>
+<p id="traCuu"></p>
+<script>
+    function tuDien() {
+        let tiengAnh = ["fox","chicken","dragon","duck","dog","cat","buffterfly","mouse","tiger","lion"];
+        let tiengViet = ["cao","ga","rong","vit","cho","meo","buom buom","chuot","ho","su tu"];
+        let valueInput = document.getElementById("text").value;
+        let result;
+        if (tiengAnh.indexOf(valueInput) !== -1){
+            let viTri = tiengAnh.indexOf(valueInput);
+            result = tiengViet[viTri];
+        } else {
+            result = "chua cap nhat";
+        }
+        document.getElementById("traCuu").innerHTML =result;
+    }
+</script>
 </body>
 </html>

@@ -1,10 +1,37 @@
-<!DOCTYPE html>
+j<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //Chương trình kiểm tra xem V có thuộc mảng đã cho không.
+    //nếu V thuộc mảng đã cho xoá V khỏi mảng
+    let mangSoNguyen = [];
+    let number = prompt("nhập số lượng phần tử cho mảng");
+    for (let i = 0; i < number; i++) {
+        mangSoNguyen[i] = +prompt("Nhập vào số nguyên");
+    }
+    document.write("Dãy số nguyên bạn vừa nhập là:" + " " + mangSoNguyen + "<br>");
+    let randomSoNguyen = prompt("nhập số nguyên bất kì");
+    let check=0;
+    for (let i = 0; i < mangSoNguyen.length; i++) {
+        if (mangSoNguyen[i] === randomSoNguyen) {
+            mangSoNguyen.splice(i, 1);
+            mangSoNguyen.push(0);
+            check++;
+        }
+    }
+    if (check !== 0) {
+        document.write("Dãy số nguyên sau khi xóa:" + " " + mangSoNguyen);
+    } else {
+        document.write(randomSoNguyen + " " + "không có trong mảng");
+    }
+
+    // fail
+
+
+</script>
 </body>
 </html>

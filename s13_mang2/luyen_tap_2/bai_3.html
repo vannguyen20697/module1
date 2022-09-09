@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+   // Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.
+   // Chương trình này đếm số ký tự số trong mảng.
+    let array = [];
+    let number = prompt('nhập độ dài của chuỗi');
+    let count = 0;
+    for (let i=0; i< number;i++){
+        array.push(prompt('nhập phần tử mảng'));
+        if(!isNaN(array[i])) {
+            count++;
+        }
+     }document.write('Mãng ký tự: ' + array + '<br>');
+
+    document.write('Đếm số ký tự số trong mảng là: ' + count );
+</script>
 </body>
 </html>

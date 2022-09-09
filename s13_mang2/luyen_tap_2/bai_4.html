@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //Viết một chương trình để đếm số từ trong một chuỗi
+    let str = prompt('Nhập 1 chuỗi bất kỳ');
+    let array = str.split(" ");
+    // document.write('Chuỗi đã nhập là: ' + str + ' có số từ là: ' + array.length);
+    document.write('Chuỗi đã nhập là: ' + str + '<br>');
+    let count = 0;
+    for (let i=0; i<array.length;i++){
+        if(isNaN(array[i])){
+            count++
+        }
+
+    } document.write('sô lượng từ trong chuỗi ' + count);
+
+
+</script>
 </body>
 </html>
