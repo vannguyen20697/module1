@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<p>Sample Screen:</p>
+    <input type="text" id="textValue"/>
+    <input type="button" onclick="add_array()" id="buttonAdd" value="Add";/>
+    <input type="button" onclick="display_array()" id="buttonDisplay" value="Display";/>
+    <div id="result"></div>
+
+<script>
+    let x = 0;
+    let array = Array(); //Tạo mảng array để lưu các giá trị được nhập vào
+    function add_array() {
+        array[x]= document.getElementById("textValue").value; // gán phần tử ở ô text giá trị số
+        alert('Phần tử: ' + array[x] + 'nằm ở vị trí ' + x);
+        x++;
+        document.getElementById("textValue").value=""; // trả về lại giá trị rỗng
+    }
+    function display_array() {
+        let e = "<hr/>";
+        for (let i = 0; i < array.length; i++) {    // chiều dài chuỗi nhập vào
+            e += "Phần tử " + i + " = " + array[i] + "<br/>";
+            document.getElementById("result").innerHTML = e; // lấy phần tử của result -
+                                                                // thay đổi thành giá trị thành e
+        }
+
+    }
+</script>
 </body>
 </html>
