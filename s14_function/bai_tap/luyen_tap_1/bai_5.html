@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //, tạo một hàm nhận vào một tham số dạng chuỗi duy nhất
+    //Trong hàm này, duyệt qua mảng thứ nhất để tìm tên ngôi sao
+    //Nếu tìm thấy, trả lại giá trị tương ứng với chỉ số đó ở mảng thứ hai
+    //
+    let nameStar1 = ['polaris', 'aldebaran', 'deneb', 'vega', 'altair', 'dubhe' , 'regulus'];
+    let nameStar2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major','Leo'];
+    function star(name) {
+        let check=0;
+        for (i = 0; i < nameStar1.length; i++) {
+            if (name == nameStar1[i]) {
+                check++;
+                break;
+            }
+        }
+        if(check){
+                document.write('chòm sao tương ứng là ' + nameStar2[i]);
+        } else {
+           document.write('không có chòm sao tương ứng') ;
+        }
+
+    }
+    let a = prompt("Nhập vào ngôi sao bạn muốn tìm chòm sao");
+    star(a)
+
+</script>
+</body>
+</html>

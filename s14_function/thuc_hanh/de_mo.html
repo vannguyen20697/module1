@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // function func1(a){
+    //     if(a == 2)
+    //         return 2;
+    //     return a * func1(a - 1);
+    // }
+    // let result = func1(2);
+    // document.write(result);
+    //bai 2:
+    // function processConfirm(a) {
+    //     if (a === 'answer') {
+    //         result = "Excellent. We'll play a nice game of chess.";
+    //     } else {
+    //         result = "Maybe later then.";
+    //     }
+    //     return result;
+    // }
+    // let aHa = processConfirm('dadsasd');
+    // document.write(aHa);
+    //bai 3:
+    function processConfirm(answer) {
+        let result = ''
+        if (answer){
+            result = "Excellent. We'll play a nice game of chess.";
+        } else{
+            result = "Maybe later then.";
+        }
+        return result;
+    }
+
+    let confirmAnswer = confirm("Shall we play a game");
+    let theAnswer =  processConfirm(confirmAnswer);
+     alert(theAnswer);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //hàm tính diện tích, hàm tính chu vi hình tròn
+    function dienTich(a) {
+        return Math.pow(a, 2)*3.14;
+    }
+    function chuVi(a) {
+        return 3.14*2*a;
+    }
+    let number = parseFloat(prompt('Nhập bán kính của hình tròn'));
+    if (number <= 0){
+        alert('Nhập lại bán kính hình tròn')
+    } else {
+        document.write('Diện tích của hình tròn là: ' + dienTich(number) + '<br>');
+        document.write('Chu vi của hình tròn là: ' + chuVi(number));
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // hàm truyền vào một mảng ký tự, và một ký tự bất kỳ
+    //kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không
+    // Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+    function kiemTra(array, a) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (a == array[i])
+                count++;
+        }
+
+        if (count) {
+            document.write('ký tự có nằm trong mảng và số lần xuất hiện là: ' + count)
+        } else {
+            document.write(-1);
+        }
+    }
+    let mangKyTu = [];
+    let num= parseInt(prompt('Nhập vào số lượng phần tử mảng'));
+    for (let i = 0; i < num ; i++) {
+        let kyTu = prompt('Nhập phần tử của mảng');
+        mangKyTu.push(kyTu);
+    }
+    let kyTuCanKiemTra = prompt('Nhập ký tự cần kiểm tra');
+    kiemTra(mangKyTu,kyTuCanKiemTra)
+</script>
+</body>
+</html>
