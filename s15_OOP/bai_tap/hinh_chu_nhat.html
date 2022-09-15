@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" style="border: 1px red solid" width="400" height="200">
+</canvas>
+<br>
+ <!--Viết một lớp các đối tượng hình chữ nhật lấy tên là Rectangle, mỗi hình chữ nhật đều có những đặc tính sau:
++ Có thông số chiều dài (int).
++ Có thông số chiều rộng (int).
++ Có tính năng tính diện tích.
++ Có tính năng tính chu vi.
++ Có tính năng hiển thị trực quan hình chữ nhật bằng cách vẽ lên canvas -->
+<script>
+    class Rectangle {
+        constructor(length,width) {
+            this.length = length;
+            this.width = width ;
+        }
+        calculatorArea(){
+            document.write('Diện tích của hình chữ nhật là '+ this.length*this.width + '<br>' );
+        }
+        calcutorPerimeter(){
+            document.write('Chu vi của hình chữ nhật là '+ 2*(this.length+this.width) );
+        }
+    }
+    let a = parseInt(prompt('Nhập chiều dài của hình chữ nhật'));
+    let b =  parseInt(prompt('Nhập chiều rộng của hình chữ nhật'))
+    let rectangleA = new Rectangle(a,b);
+    document.write('Chiều dài hình chữ nhật là: ' + rectangleA.length + '<br>');
+    document.write('Chiều rộng hình chữ nhật là: ' + rectangleA.width + '<br>');
+    rectangleA.calculatorArea();
+    rectangleA.calcutorPerimeter();
+    // vẽ hình chữ nhật dựa trên các chỉ số trên
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+    ctx.fillStyle = "blue";
+    ctx.fillRect(100,50,rectangleA.length,rectangleA.width);
+
+ </script>
+</body>
+</html>

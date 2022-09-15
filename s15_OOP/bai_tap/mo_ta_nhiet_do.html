@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Khởi tạo một đối tượng Temperature.
+    class Temperature{
+        constructor(celsius) {
+        this.celsius = celsius;
+        }
+        convertFahrenheit(){
+            document.write('Chuyển đổi từ độ C sang độ F: ' + (9/5 * this.celsius + 32) + '<br>');
+        }
+        convertKenvin(){
+            document.write('Chuyển đổi từ độ C sang độ K: ' + (this.celsius + 273.15) );
+        }
+    }
+    //Gán giá trị độ C cho đối tượng ở nhiệt độ 25 độ.
+    let celsiusA = new Temperature(25);
+    celsiusA.convertFahrenheit();
+    celsiusA.convertKenvin();
+
+</script>
+</body>
+</html>
