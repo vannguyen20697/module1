@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   // Viết một lớp lấy tên là Apple
+   //tạo ra quả táo đã có khối lượng mặc định là 10 đv.
+   class QuaTao {
+       constructor() {
+           this.weight = 10;
+       }
+
+       GiamKhoiLuong() {
+           this.weight--;
+       }
+
+       getWeight() {
+           return this.weight;
+       }
+
+       AnHetQuaTao() {
+           if (this.weight == 0) {
+               return true;
+           } else {
+               return false;
+           }
+       }
+   }
+   class ConNguoi {
+       constructor(name, gender, weight) {
+           this.name = name;
+           this.gender = gender;
+           this.weight = weight;
+       }
+
+</script>
+</body>
+</html>
