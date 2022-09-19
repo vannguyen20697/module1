@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="img/pic_bulbon.gif" id="lamp" alt="">
+<br>
+<button id="switch" onclick="turnOn_turnOff_lamp()">TurnOff/TurnOn</button>
+<script>
+    // class BongDen {
+    //     constructor() {
+    //         this.trangthai = false //Đầu tiền cho đèn tắt
+    //     }
+    //
+    //     DongDienVaoBongDen() {
+    //         this.trangthai = true;  //Đèn sẽ sáng
+    //     }
+    //
+    //     DongDienKhongVaoBongDen() {
+    //         this.trangthai = false; // đèn tắt
+    //     }
+    //
+    //     KiemTraBongDen() {
+    //         if (this.trangthai) {
+    //             return "Đèn sáng";
+    //         } else {
+    //             return "Đèn không sáng";
+    //         }
+    //     }
+    // }
+    //
+    // class CongTac {
+    //     constructor(trangThai, bongden) {
+    //         this.trangthai = false;
+    //         this.bongden = bongden;
+    //     }
+    //
+    //     KetNoiDenBongDen(doituong) {
+    //         this.bongden = doituong;
+    //     }
+    //
+    //     BatCongTac () {
+    //         this.trangThai = true;
+    //         this.bongden.DongDienVaoBongDen();
+    //     }
+    //
+    //     TatCongTac () {
+    //         this.trangThai = false;
+    //         this.bongden.DongDienKhongVaoBongDen();
+    //     }
+    // }
+    //
+    // let bongDen1 = new BongDen();
+    // let congTac1 = new CongTac();
+    // //Chưa cho dòng điện vào và chưa dùng công tắc
+    // document.write(bongDen1.KiemTraBongDen() + "<br>");// Trường hợp này chưa có dòng điện nên bóng đèn không sáng
+    // bongDen1.DongDienVaoBongDen();  //Trường hợp này dòng điện đã vào bóng đèn nên bóng đèn sáng
+    // document.write(bongDen1.KiemTraBongDen() + "<br>");
+    // bongDen1.DongDienKhongVaoBongDen(); //Trường hợp này dòng điện không vào bóng đèn nên bóng đèn không sáng
+    // document.write(bongDen1.KiemTraBongDen() + "<br>");
+    //
+    // //Dùng công tắc
+    // congTac1.KetNoiDenBongDen(bongDen1); //Kết nối công tắc đến bóng đèn
+    // congTac1.BatCongTac(); //bật công tắc thì dòng điện vào bóng đèn.
+    // document.write(bongDen1.KiemTraBongDen() + "<br>"); //Đèn sáng
+    //
+    // congTac1.KetNoiDenBongDen(bongDen1); //kết nối công tắc đến bóng đèn
+    // congTac1.TatCongTac(); // tắt công tắc thì dòng điện không vào bóng đèn
+
+</script>
+</body>
+</html>

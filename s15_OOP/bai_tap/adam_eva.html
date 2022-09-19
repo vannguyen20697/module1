@@ -7,10 +7,9 @@
 <body>
 <script>
    // Viết một lớp lấy tên là Apple
-   //tạo ra quả táo đã có khối lượng mặc định là 10 đv.
    class QuaTao {
        constructor() {
-           this.weight = 10;
+           this.weight = 10; //tạo ra quả táo đã có khối lượng mặc định là 10 đv.
        }
 
        GiamKhoiLuong() {
@@ -29,13 +28,94 @@
            }
        }
    }
+   //viet lop Human (co ten, gioi tinh, can nang)
    class ConNguoi {
        constructor(name, gender, weight) {
            this.name = name;
            this.gender = gender;
            this.weight = weight;
        }
+       GioiTinhNam() {
+           if (this.gender == 'Nam') {
+               return true;
+           } else {
+               return false;
+           }
+       }
+       getGioiTinh(){      //hoạt động khi một thuộc tính được đọc
+           return  this.gender;
+       }
+       setGioiTinh(gioitinh) {
+           this.gender = gioitinh;
+       }
+       getName() {
+           return this.name;
+       }
 
+       setName(name) { //được gọi khi thuộc tính được đặt
+           this.name = name;
+       }
+
+       getWeight() {
+           return this.name + ":" + this.weight;
+       }
+
+       setWeight(value) {
+           this.weight = value;
+       }
+
+       say(text) {
+           console.log(this.name + " : " + text);
+       }
+
+       checkQuaTao(quatao) {
+           if (quatao.AnHetQuaTao()) {
+               console.log(this.name + " : " + "Táo hết rồi");
+               return false;
+           } else {
+               return true;
+           }
+       }
+
+       AnTao(quatao) {
+           if (this.checkQuaTao(quatao)) {
+               this.weight++;
+               quatao.GiamKhoiLuong();
+           }
+       }
+       ThongTinCaNhan(){
+           document.write(this.name+","+this.gender+","+this.weight+"<br>");
+       }
+
+   }
+   //Kich bản
+   let quaTao = new QuaTao();
+   console.log("Khối lượng của quả táo ban đầu: " + quaTao.getWeight());
+   let adam = new ConNguoi("Adam", "Nam",60);
+   let eva = new ConNguoi("Eva", "Nữ", 40);
+   console.log("Adam là Nam giới : " + adam.GioiTinhNam());
+   console.log("Eva là Nam giới : " + eva.GioiTinhNam());
+   adam.say("Ăn táo không em?");
+   eva.say("Ăn!");
+   console.log("Táo ăn được : " + eva.checkQuaTao(quaTao));
+   eva.AnTao(quaTao);
+   eva.say("Anh ăn đi");
+   adam.AnTao(quaTao);
+   adam.AnTao(quaTao);
+   adam.AnTao(quaTao);
+   adam.AnTao(quaTao);
+   adam.AnTao(quaTao);
+   adam.AnTao(quaTao);
+   adam.AnTao(quaTao);
+   adam.AnTao(quaTao);
+   adam.AnTao(quaTao);
+   console.log(adam.getWeight());
+   console.log(eva.getWeight());
+   console.log("Quả táo: " + quaTao.getWeight());
+   adam.say("Em ăn đi!");
+   eva.AnTao(quaTao);
+   eva.ThongTinCaNhan();
+   adam.ThongTinCaNhan();
 </script>
 </body>
 </html>
