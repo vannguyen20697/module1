@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let canvas = document.getElementById('myCanvas');
+    // let context = canvas.getContext('2d');
+    // let imageObj = new Image();
+    // imageObj.onload = function() {
+    //     context.drawImage(imageObj, 69, 50);
+    // };
+    // imageObj.src = 'http://www.html5canvastutorials.com/demos/assets/darthvader.jpg';
+    //tao doi tuong va hien thi thong tin cua doi tuong
+    function Student(id, name, address) { //dinh nghia class student voi cac thuoc tinh
+            this.id = id;
+            this.name = name;
+            this.address = address;
+            this.getInfor = function () { // getinfo tra ve thong tin cua doi tuong
+                return "Id=" + this.id + " Name=" + this.name + " Address=" + this.address
+            }
+    }
+    //khoi tao doi tuong
+    let studen = new Student(1,"Nguyen Van A","Gia Lai");
+    console.log(studen.getInfor()); //thuc thi phuong thuc getInfor thong qua doi tuong studen
+</script>
+</body>
+</html>

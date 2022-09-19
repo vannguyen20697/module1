@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let person = {}; // doi tuong rong
+    // let person = {
+    //     name: ['Bob', 'Smith'],
+    //     age: 32,
+    //     gender: 'male',
+    //     interests: ['music', 'skiing'],
+    //     bio: function() {
+    //         alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+    //     },
+    //     greeting: function() {
+    //         alert('Hi! I\'m ' + this.name[0] + '.');
+    //     }
+    // };
+    // person.bio();
+    //Khai báo lớp Apple với các thuộc tính type, color,
+    //phương thức getAppleInfo()
+    // function Apple (type) {
+    //     this.type = type;
+    //     this.color = "red";
+    //     this.getInfo = getAppleInfo;
+    // }
+    // //Khai báo hàm getAppleInfo()
+    // //Khuyến nghị: đây là cách không nên dùng,
+    // function getAppleInfo() {
+    //     return this.color + ' ' + this.type + ' apple';
+    // }
+    // let apple = new Apple('macintosh');
+    // apple.color = "reddish";
+    // alert(apple.getInfo());
+
+    //su dung 1 ham
+    // let apple = new function() {
+    //     this.type = "macintosh";
+    //     this.color = "red";
+    //     this.getInfo = function () {
+    //         return this.color + ' ' + this.type + ' apple';
+    //     };
+    // }
+    // apple.color = "reddish";
+    // alert(apple.getInfo());
+
+    let person1 = {
+    name: 'Chris',
+        greeting: function() {
+        alert('Hi! I\'m ' + this.name + '.');
+    }
+    }
+
+    let person2 = {
+        name: 'Brian',
+        greeting: function() {
+            alert('Hi! I\'m ' + this.name + '.');
+        }
+    }
+    person1.greeting();
+    person2.greeting();
+</script>
+</body>
+</html>
