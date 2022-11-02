@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTraPhanSo(){
+        let tuSo=[];
+        let mauSo=[];
+        for (let i = 1;i <=2;i++){
+            tuSo.push(prompt('Nhap tu so cua phan so thu ' + i));
+        }
+        for (let i = 1;i <=2;i++){
+            mauSo.push(prompt('Nhap mau so cua phan so thu ' + i ));
+        }
+        if ((tuSo[0]*mauSo[1]) == (tuSo[1]*mauSo[0])){
+            alert('hai phan so bang nhau');
+        }else {
+            alert('hai phan so khong bang nhau');
+        }
+    }
+       kiemTraPhanSo();
+
+</script>
+</body>
+</html>

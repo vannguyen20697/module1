@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>
+    <input type="button" value="ADD" onclick="themVao()"><br><br>
+    <input type="button" value="Delete" onclick="xoaSoTietKiem()">
+
+</label>
+<p id="display"></p>
+</body>
+<script>
+    class SoTietKiem {
+        constructor(maSo,loaiTietKiem,hoTenKhachHang,chungMinhNhanDan,ngayMoSo,soTienGui) {
+            this.maSo = maSo;
+            this.loaiTietKiem = loaiTietKiem;
+            this.hoTenKhachHang = hoTenKhachHang;
+            this.chungMinhNhanDan = chungMinhNhanDan;
+            this.ngayMoSo = ngayMoSo;
+            this.soTienGui = soTienGui;
+        }
+        getMaSo() {
+            this.maSo;
+        }
+
+        setMaSo() {
+            return this.maSo;
+        }
+
+        getLoaiTietKiem() {
+            this.loaiTietKiem;
+        }
+
+        setLoaiTietKiem() {
+            return this.loaiTietKiem;
+        }
+
+        getHoTenKhachHang() {
+            this.hoTenKhachHang;
+        }
+
+        setHoTenKhachHang() {
+            return this.hoTenKhachHang;
+        }
+
+        getChungMinhNhanDan() {
+            this.chungMinhNhanDan;
+        }
+
+        setChungMinhNhanDan() {
+            return this.chungMinhNhanDan;
+        }
+
+        getNgayMoSo() {
+            this.ngayMoSo;
+        }
+
+        setNgayMoSo() {
+            return this.ngayMoSo;
+
+        }
+        getSoTienGui() {
+            this.soTienGui;
+        }
+
+        setSoTienGui() {
+            return this.soTienGui;
+
+        }
+    }
+    let soTietKiem1 = new SoTietKiem("123",1, "NGUYEN VAN A", 205581296, "12/2/2022", "3000");
+    let soTietKiem2 = new SoTietKiem("456",2,"NGUYEN VAN B", 205581297, "13/2/2022", "4000");
+    let soTietKiem3 = new SoTietKiem("789",3, "NGUYEN VAN C", 205581298, "14/2/2022", "5000");
+    let arr = [soTietKiem1,soTietKiem2,soTietKiem3];
+    function danhSach(arr) {
+        let tableString = "<table border='1'>" +
+            "    <tr>\n" +
+            "        <th>Ma So</th>\n" +
+            "        <th>Loai Tiet Kiem</th>\n" +
+            "        <th>Ho Ten Khach Hang</th>\n" +
+            "        <th>Chung Minh  Nhan Dan</th>\n" +
+            "        <th>Ngay Mo So</th>\n" +
+            "        <th>So Tien Gui</th>\n" +
+            "    </tr>";
+        for (let i = 0; i < arr.length; i++) {
+            tableString += "<tr>\n" +
+                "        <td>" + arr[i].setMaSo() + "</td>\n" +
+                "        <td>" + arr[i].setLoaiTietKiem() + "</td>\n" +
+                "        <td>" + arr[i].setHoTenKhachHang() + "</td>\n" +
+                "        <td>" + arr[i].setChungMinhNhanDan() + "</td>\n" +
+                "        <td>" + arr[i].setNgayMoSo() + "</td>\n" +
+                "        <td>" + arr[i].setSoTienGui() + "</td>\n" +
+                " </tr>";
+        }
+        tableString += "</table>";
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+    danhSach(arr);
+    function themVao() {
+        let maSo = prompt("Nhap ma so");
+        let loaiTietKiem = prompt("Nhap loai tiet kiem");
+        let hoVaTen = prompt("Nhap ho va ten");
+        let chungMinh = prompt("Nhap chung minh");
+        let ngayMoSo = prompt("Nhap ngay mo so");
+        let soTienGui = prompt("Nhap so tien gui");
+        let themSoTietKiem = new SoTietKiem( maSo,loaiTietKiem,hoVaTen,chungMinh,ngayMoSo,soTienGui);
+        arr.push(themSoTietKiem);
+        danhSach(arr);
+    }
+
+    // function xoaSoTietKiem() {
+    //     let viTri;
+    //     do {
+    //         viTri = prompt("Vị trí muốn xóa:");
+    //         if (viTri ==   || viTri < 0 || viTri > arr.length) {
+    //             alert("vui lòng nhập lại");
+    //         }
+    //     } while (viTri % viTri !== 0 || viTri < 0 || viTri > arr.length)
+    //     {
+    //         alert("BẠN CÓ CHẮC XÓA:");
+    //         arr.splice(viTri - 1, 1);
+    //         danhSach(arr);
+    //     }
+    // }
+
+</script>
+
+</html>
